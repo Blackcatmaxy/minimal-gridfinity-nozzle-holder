@@ -17,17 +17,17 @@ difference () {
         gridfinityBase(x_size, y_size, length, 0, 0, 1);
     }
 
-    Hole(-1 * hole_grid_x, -9.5, dots025);
-    Text(-1 * hole_grid_x, 0, "0.25");
-    Hole(-1 * hole_grid_x, 9.5, dots025);
+    Hole(-1 * hole_grid_x, -9.5);
+    Hole(-1 * hole_grid_x, 0);
+    Hole(-1 * hole_grid_x, 9.5);
 
-    Hole(0 * hole_grid_x, -9.5, dots04);
-    Text(0 * hole_grid_x, 0, "0.4");
-    Hole(0 * hole_grid_x, 9.5, dots04);
+    Hole(0 * hole_grid_x, -9.5);
+    Text(0 * hole_grid_x, 0, "0.6");
+    Hole(0 * hole_grid_x, 9.5);
 
-    Hole(1 * hole_grid_x, -9.5, dots06);
-    Text(1 * hole_grid_x, 0, "0.6");
-    Hole(1 * hole_grid_x, 9.5, dots06);
+    Hole(1 * hole_grid_x, -9.5);
+    Hole(1 * hole_grid_x, 0);
+    Hole(1 * hole_grid_x, 9.5);
 
     // text and dots test (remove * to enable)
     * union() {

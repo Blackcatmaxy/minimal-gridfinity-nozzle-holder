@@ -1,7 +1,7 @@
 include <common.scad>
 
 // how many gridfinity units should the box be?
-x_size = 2;
+x_size = 1;
 y_size = 1;
 z_size = 3;
 
@@ -9,41 +9,25 @@ z_size = 3;
 thread_depth = 7.5;
 
 // hole grid
-hole_grid_x = (x_size * length - 2 * 3.2) / 7;
+hole_grid_x = (x_size * length - 2 * 3.2) / 3;
 
 difference () {
     union () {
         gridfinityInit(x_size, y_size, height(z_size), thread_depth, length);
         gridfinityBase(x_size, y_size, length, 0, 0, 1);
     }
-    
-    Hole(-3 * hole_grid_x, -9.5);
-    //Text(-3 * hole_grid_x, 0, "0.15");
-    Hole(-3 * hole_grid_x, 9.5);
-    
-    Hole(-2 * hole_grid_x, -9.5);
-    //Text(-2 * hole_grid_x, 0, "0.25");
-    Hole(-2 * hole_grid_x, 9.5);
 
     Hole(-1 * hole_grid_x, -9.5);
-    Text(-1 * hole_grid_x, 0, "0.4");
+    Text(-1 * hole_grid_x, 0, "0.2");
     Hole(-1 * hole_grid_x, 9.5);
 
     Hole(0 * hole_grid_x, -9.5);
-    //Text(0 * hole_grid_x, 0, "0.4");
+    //Text(0 * hole_grid_x, 0, "0.6");
     Hole(0 * hole_grid_x, 9.5);
 
     Hole(1 * hole_grid_x, -9.5);
-    Text(1 * hole_grid_x, 0, "0.4");
+    Text(1 * hole_grid_x, 0, "0.3");
     Hole(1 * hole_grid_x, 9.5);
-
-    Hole(2 * hole_grid_x, -9.5);
-    //Text(2 * hole_grid_x, 0, "0.6");
-    Hole(2 * hole_grid_x, 9.5);
-
-    Hole(3 * hole_grid_x, -9.5);
-    //Text(3 * hole_grid_x, 0, "0.8");
-    Hole(3 * hole_grid_x, 9.5);
 
     // text and dots test (remove * to enable)
     * union() {
